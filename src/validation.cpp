@@ -49,7 +49,7 @@
 #include <boost/algorithm/string/join.hpp>
 #include <boost/thread.hpp>
 
-#define REWARD_CUT_BLOCK 8888888
+#define REWARD_CUT_BLOCK 500
 
 #if defined(NDEBUG)
 # error "Pahadicoin cannot be compiled without assertions."
@@ -1056,13 +1056,25 @@ CAmount GetBlockSubsidy(int nHeight)
     */
     int64_t nSubsidy = 0 * COIN;
 
-    if(nHeight < 1000)
+    if(nHeight < 100)
     {
-       nSubsidy = 20000.007 * COIN;
+       nSubsidy = 10000 * COIN;
+    }
+    else if(nHeight < 200)
+    {
+       nSubsidy = 8000 * COIN;
+    }
+    else if(nHeight < 300)
+    {
+       nSubsidy = 6000 * COIN;
+    }
+    else if(nHeight < 400)
+    {
+       nSubsidy = 4000 * COIN;
     }
     else if (nHeight <= REWARD_CUT_BLOCK)
     {
-        nSubsidy = 9 * COIN;
+        nSubsidy = 2000 * COIN;
     }
 
     return nSubsidy;

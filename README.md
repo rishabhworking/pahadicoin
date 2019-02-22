@@ -77,3 +77,10 @@ Translations are periodically pulled from Transifex and merged into the git repo
 
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
+
+Details About our Logo:
+
+Icon made by: https://www.freepik.com 
+Downloaded from: https://www.flaticon.com 
+Licensed by: Creative Commons BY 3.0 (http://creativecommons.org/licenses/by/3.0)
+https://www.flaticon.com/free-icon/mountains_119598
